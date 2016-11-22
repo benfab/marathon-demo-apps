@@ -1,0 +1,17 @@
+{
+    "id": "rng",
+    "container": {
+        "docker": {
+            "image": "benfab/rng",
+            "network": "BRIDGE",
+            "portMappings": [{
+                "containerPort": 80,
+                "hostPort": 0,
+                "protocol": "tcp"
+            }]
+        }
+    },
+    "cpus": 1,
+    "mem": 256,
+    "instances": 1
+}
