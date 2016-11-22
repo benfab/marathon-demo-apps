@@ -1,5 +1,14 @@
 {
     "id": "app-flask",
+    "labels": {
+   	"HAPROXY_0_MODE": "http",
+   	"HAPROXY_GROUP": "external",
+    	"SERVICE_NAME": "app-flask",
+    	"MARATHON_HOSTNAME": "app-flack",
+    	"HAPROXY_0_PORT": "8090",
+    	"SERVICE_TAGS": "webserver",
+    	"HAPROXY_0_VHOST": "app-flask.testing"
+  },
     "container": {
         "docker": {
             "image": "benfab/app-flask",
