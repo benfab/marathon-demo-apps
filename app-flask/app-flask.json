@@ -1,0 +1,17 @@
+{
+    "id": "app-flask",
+    "container": {
+        "docker": {
+            "image": "benfab/app-flask",
+            "network": "BRIDGE",
+            "portMappings": [{
+                "containerPort": 8359,
+                "hostPort": 0,
+                "protocol": "tcp"
+            }],
+        }
+    },
+    "cpus": 1,
+    "mem": 128,
+    "instances": 4
+}
