@@ -2,7 +2,7 @@
     "id": "hasher",
     "container": {
         "docker": {
-            "image": "benfab/hasher",
+            "image": "nexus.msdomain.com:14000/hasher",
             "network": "BRIDGE",
             "portMappings": [{
                 "containerPort": 80,
@@ -11,7 +11,7 @@
             }]
         }
     },
-    "cpus": 1,
+    "cpus": 0.1,
     "mem": 256,
     "instances": 1
 }
