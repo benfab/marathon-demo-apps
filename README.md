@@ -28,18 +28,23 @@ Credits @ https://github.com/getstek/flaskviewer
 1. Build the docker image
 
 Go to the app folder
+
 `cd app-flask`
 
 Build the docker image from the Dockerfile
+
 `docker build .`
 
 Get the image id from the newly created image
+
 `docker images`
 
 Tag the image
+
 `docker tag <image-id> nexus.<your-ms-domain>:1400/app-flask`
 
 Push the image to your repo
+
 `docker push nexus.<your-ms-domain>:1400/app-flask`
 
 2. Deploy the marathon application
