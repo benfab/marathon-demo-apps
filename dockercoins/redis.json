@@ -1,8 +1,5 @@
 {
     "id": "redis",
-    "labels": {
-                "SERVICE_NAME": "redis",
-                "},
     "container": {
         "docker": {
             "image": "nexus.msdomain.com:14000/redis",
@@ -11,10 +8,12 @@
                 "containerPort": 80,
                 "hostPort": 0,
                 "protocol": "tcp"
-            }]
-        }
+            }],
+            "parameters": [
+             {"key": "env", "value": "SERVICE_NAME=redis"}
+            ]}
     },
     "cpus": 0.1,
-    "mem": 256,
+    "mem": 32,
     "instances": 1
 }
