@@ -23,7 +23,41 @@ Credits @ https://github.com/getstek/flaskviewer
 
 `deploy.sh app owncloudpostgres.json`
 
+## Deploy app-flask
+
+1. Build the docker image
+
+`cd app-flask`
+
+`docker build .`
+
+`docker images`
+
+`docker tag <image-id> nexus.<your-ms-domain>:1400/app-flask`
+
+`docker push nexus.<your-ms-domain>:1400/app-flask`
+
+2. Deploy the marathon application
+
+Edit the app-flask.json definition to specify the url of the image.
+
+`deploy.sh app app-flask/app-flask.json`
+
+
 ## Deploy Dockercoins
+
+1. Build the Docker images
+
+`cd rng`
+
+`docker build .`
+
+`docker tag nexus.<your-ms-domain>:1400/app-flask`
+
+`docker pull nexus.<your-ms-domain>:1400/app-flask`
+
+
+2. Deploy the services
 
 `deploy.sh app dockercoins/rng.json`
 
@@ -35,6 +69,6 @@ Credits @ https://github.com/getstek/flaskviewer
 
 `deploy.sh app dockercoins/webui.json`
 
-## Deploy app-flask
+3. Browse the UI
 
-`deploy.sh app app-flask/app-flask.json`
+4. Scale the services
