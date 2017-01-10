@@ -17,6 +17,8 @@ Demo the loading balancing feature
 
 Credits @ https://github.com/getstek/flaskviewer
 
+First, update the marathon app definition <app>.json with the url of your repository.
+
 ## Deploy Owncloud
 
 `deploy.sh app owncloud/owncloud.json`
@@ -27,25 +29,13 @@ Credits @ https://github.com/getstek/flaskviewer
 
 1. Build the docker image
 
-Go to the app folder
+Go to the app folder `cd app-flask`
 
-`cd app-flask`
 
-Build the docker image from the Dockerfile
+Build the docker image from the Dockerfile `docker build -t  nexus.<your-ms-domain>:1400/app-flask .`
 
-`docker build .`
 
-Get the image id from the newly created image
-
-`docker images`
-
-Tag the image
-
-`docker tag <image-id> nexus.<your-ms-domain>:1400/app-flask`
-
-Push the image to your repo
-
-`docker push nexus.<your-ms-domain>:1400/app-flask`
+Push the image to your repo `docker push nexus.<your-ms-domain>:1400/app-flask`
 
 2. Deploy the marathon application
 
