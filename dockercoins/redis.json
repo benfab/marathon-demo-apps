@@ -1,5 +1,8 @@
 {
     "id": "redis",
+    "labels": {
+                "SERVICE_NAME": "redis",
+                "},
     "container": {
         "docker": {
             "image": "nexus.msdomain.com:14000/redis",
