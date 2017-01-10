@@ -1,5 +1,8 @@
 {
     "id": "worker",
+     "labels": {
+   	    "DOMAIN": "msdomain.com"
+  },
     "container": {
         "docker": {
             "image": "nexus.msdomain.com:14000/worker",
