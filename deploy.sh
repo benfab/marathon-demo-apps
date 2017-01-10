@@ -35,7 +35,7 @@ APP_DEFINITION="$2"
 if [ "$ARGUMENT" = "app" ];
 then
 
-        $(which curl) -X POST $MARATHON/v2/apps -d @$APP_DEFINITION -H "Content-type: application/json"
+        $(which curl) -X POST $MARATHON/v2/apps --data-binary @$APP_DEFINITION -H "Content-type: application/json"
         printf "\n\nDeploying file: %s of type: %s\n" $APP_DEFINITION $ARGUMENT
 
 elif [ "$ARGUMENT" = "group" ];
