@@ -18,15 +18,23 @@ Demo the loading balancing feature
 Credits @ https://github.com/getstek/flaskviewer
 
 ## Deploy Owncloud
+
 `deploy.sh app owncloud/owncloud.json`
+
 `deploy.sh app owncloudpostgres.json`
 
 ## Deploy Dockercoins
+
 `deploy.sh app dockercoins/rng.json`
+
 `deploy.sh app dockercoins/hasher.json`
+
 `deploy.sh app dockercoins/redis.json`
+
 `deploy.sh app dockercoins/worker.json`
+
 `deploy.sh app dockercoins/webui.json`
 
 ## Deploy app-flask
+
 `deploy.sh app app-flask/app-flask.json`
