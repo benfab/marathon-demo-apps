@@ -27,7 +27,7 @@
       "file:///etc/docker.tar.gz"
         ]
   },
-  "instances": 0.1,
+  "instances": 1,
   "cpus": 0.25,
   "mem": 384
 }
