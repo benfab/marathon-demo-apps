@@ -1,11 +1,11 @@
 {
     "id": "worker",
-     "labels": {
-   	    "DOMAIN": "msdomain.com"
-  },
     "container": {
         "docker": {
             "image": "nexus.msdomain.com:14000/worker",
+            "parameters": [
+              {"key": "env", "value": "DOMAIN=msdomain.com"}
+               ],
             "network": "BRIDGE",
             "portMappings": [{
                 "containerPort": 80,
@@ -15,6 +15,6 @@
         }
     },
     "cpus": 0.1,
-    "mem": 256,
+    "mem": 32,
     "instances": 1
 }
