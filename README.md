@@ -94,4 +94,5 @@ http://haproxy-vip:1000
 4. Scale the services
 
 Browse the marathon web interface http://ip-vm-control:8080
+
 Select indiviual service and scale them
