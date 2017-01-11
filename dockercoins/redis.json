@@ -5,15 +5,13 @@
             "image": "nexus.msdomain.com:14000/redis",
             "network": "BRIDGE",
             "portMappings": [{
-                "containerPort": 80,
+                "containerPort": 6379,
                 "hostPort": 0,
                 "protocol": "tcp"
-            }],
-            "parameters": [
-             {"key": "env", "value": "SERVICE_NAME=redis"}
-            ]}
+            }]
+        }
     },
     "cpus": 0.1,
-    "mem": 32,
+    "mem": 128,
     "instances": 1
 }
