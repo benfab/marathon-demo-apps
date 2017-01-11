@@ -21,7 +21,7 @@ Credits @ https://github.com/getstek/flaskviewer
 
 First, update the marathon app definition <app>.json with the url of your repository.
 
-`find . -type f -name "*.json" -print0 | xargs -0 sed -i "s/"msdomain"/"befa.com"/g" `
+`find . -type f -name "*.json" -print0 | xargs -0 sed -i "s/"msdomain.com"/"befa.com"/g" `
 
 ## Deploy Owncloud
 
