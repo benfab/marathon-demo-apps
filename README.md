@@ -1,5 +1,7 @@
 # Demos apps for Marathon
 
+# 1. Overview
+
 **Owncloud** 
 Demo the commnunication between containers and data persistence
 
@@ -19,9 +21,16 @@ Demo the loading balancing feature using the MesosMamba reference architecture.
 
 Credits @ https://github.com/getstek/flaskviewer
 
-First, update the marathon app definition <app>.json with the url of your repository.
 
-`find . -type f -name "*.json" -print0 | xargs -0 sed -i "s/"msdomain.com"/"befa.com"/g" `
+# 2. Walktrough
+
+Clone the repo `git clone https://github.com/benfab/marathon-demo-apps.git`
+
+Go to the marathon-demo-apps folder `cd marathon-demo-apps` 
+
+Update the marathon app definition `<app>.json` with your microservice domain.
+
+`find . -type f -name "*.json" -print0 | xargs -0 sed -i "s/"msdomain.com"/"yourmsdomain.com"/g" `
 
 ## Deploy Owncloud
 
