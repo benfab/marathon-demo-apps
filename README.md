@@ -2,22 +2,26 @@
 
 **Owncloud** 
 Demo the commnunication between containers and data persistence
-Based on two containers, a PostgreSQL database and the application.
+
+Based on two containers, a PostgreSQL container and the owncloud application container.
 
 Credits @ https://github.com/getstek/awg-mesos/tree/master/scripts/extras/test-mesos_docker-deployments 
 
 **dockercoins**
 Demo a microservice architecture and how to scale it.
+
 The application is made of fives services.
 
 Credits @ https://github.com/jpetazzo/dockercoins
 
 **Flask**
-Demo the loading balancing feature 
+Demo the loading balancing feature using the MesosMamba reference architecture.
 
 Credits @ https://github.com/getstek/flaskviewer
 
 First, update the marathon app definition <app>.json with the url of your repository.
+
+`find . -type f -name "*.json" -print0 | xargs -0 sed -i "s/"msdomain"/"befa.com"/g" `
 
 ## Deploy Owncloud
 
