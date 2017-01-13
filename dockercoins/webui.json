@@ -5,7 +5,7 @@
         "HAPROXY_GROUP": "external",
         "SERVICE_NAME": "webui",
         "MARATHON_HOSTNAME": "webui",
-        "HAPROXY_0_PORT": "1000",
+        "HAPROXY_0_PORT": "9000",
         "SERVICE_TAGS": "webserver",
         "HAPROXY_0_VHOST": "webui.testing"
   },
