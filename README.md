@@ -16,6 +16,9 @@ The application is made of fives services.
 
 Credits @ https://github.com/jpetazzo/dockercoins
 
+![DockerCoins](/dockercoins.png)
+
+
 **Flask**
 demos the loading balancing feature of the MesosMamba reference architecture.
 
