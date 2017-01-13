@@ -20,7 +20,10 @@
             }]
         }
     },
+    "uris":  [
+      "file:///etc/docker.tar.gz"
+        ],
     "cpus": 0.1,
-    "mem": 128,
+    "mem": 64,
     "instances": 2
 }
