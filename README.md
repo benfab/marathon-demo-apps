@@ -48,7 +48,7 @@ Update the marathon app definitiosn `<app>.json` with your microservice domain.
 Go to the app folder `cd app-flask`
 
 
-Build the docker image from the Dockerfile `docker build -t  nexus.<your-ms-domain>:1400/app-flask .`
+Build the docker image from the Dockerfile `docker build -t  nexus.<your-ms-domain>:14000/app-flask .`
 
 
 Push the image to your repo `docker push nexus.<your-ms-domain>:1400/app-flask`
@@ -76,7 +76,7 @@ Pull the redis official docker image your docker engine `docker pull redis`
 
 Tag the redis official image `docker tag <image-id>.nexus.<your-ms-domain>:1400/redis` 
 
-Push the redis official docker image your repo `docker push nexus.<your-ms-domain>:1400/redis`
+Push the redis official docker image your repo `docker push nexus.<your-ms-domain>:14000/redis`
 
 Deploy the marathon services
 
