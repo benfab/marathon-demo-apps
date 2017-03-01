@@ -51,7 +51,7 @@ Go to the app folder `cd app-flask`
 Build the docker image from the Dockerfile `docker build -t  nexus.<your-ms-domain>:14000/app-flask .`
 
 
-Push the image to your repo `docker push nexus.<your-ms-domain>:1400/app-flask`
+Push the image to your repo `docker push nexus.<your-ms-domain>:14000/app-flask`
 
 2. Deploy the marathon application
 
@@ -66,15 +66,15 @@ Build the Docker images
 
 `docker build .`
 
-`docker tag nexus.<your-ms-domain>:1400/app-flask`
+`docker tag nexus.<your-ms-domain>:14000/app-flask`
 
-`docker push nexus.<your-ms-domain>:1400/app-flask`
+`docker push nexus.<your-ms-domain>:14000/app-flask`
 
 Run the same steps, for the webui, worker, hasher images
 
 Pull the redis official docker image your docker engine `docker pull redis`
 
-Tag the redis official image `docker tag <image-id>.nexus.<your-ms-domain>:1400/redis` 
+Tag the redis official image `docker tag <image-id>.nexus.<your-ms-domain>:14000/redis` 
 
 Push the redis official docker image your repo `docker push nexus.<your-ms-domain>:14000/redis`
 
