@@ -66,7 +66,7 @@ Build the Docker images
 
 `docker build .`
 
-`docker tag nexus.<your-ms-domain>:14000/app-flask`
+`docker tag <image-id> nexus.<your-ms-domain>:14000/app-flask`
 
 `docker push nexus.<your-ms-domain>:14000/app-flask`
 
