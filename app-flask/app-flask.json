@@ -4,7 +4,7 @@
    	"HAPROXY_0_MODE": "http",
    	"HAPROXY_GROUP": "external",
     	"SERVICE_NAME": "app-flask",
-    	"MARATHON_HOSTNAME": "app-flack",
+    	"MARATHON_HOSTNAME": "app-flask",
     	"HAPROXY_0_PORT": "8090",
     	"SERVICE_TAGS": "webserver",
     	"HAPROXY_0_VHOST": "app-flask.demo"
