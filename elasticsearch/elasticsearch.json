@@ -1,0 +1,54 @@
+
+{
+  "id": "/elasticsearch",
+  "cmd": null,
+  "cpus": 0.2,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "mesos/elasticsearch-scheduler",
+      "network": "HOST",
+      "portMappings": [],
+      "privileged": false,
+      "parameters": [
+        {
+          "key": "env",
+          "value": "ES_HEAP_SIZE=256m"
+        }
+      ],
+      "forcePullImage": false
+    }
+  },
+  "env": {
+    "JAVA_OPTS": "-Xms128m -Xmx256m"
+  },
+  "labels": {
+    "HAPROXY_0_MODE": "http",
+    "HAPROXY_GROUP": "external",
+    "SERVICE_NAME": "elasticsearch",
+    "MARATHON_HOSTNAME": "elasticsearch",
+    "HAPROXY_0_PORT": "9000",
+    "SERVICE_TAGS": "elasticsearch"
+  },
+  "portDefinitions": [],
+  "args": [
+    "--zookeeperMesosUrl",
+    "zk://192.7.55.100:2181/mesos",
+    "--elasticsearchDockerImage",
+    "elasticsearch:2.4.4",
+    "--elasticsearchCpu",
+    "0.1",
+    "--elasticsearchNodes",
+    "5",
+    "--externalVolumeDriver",
+    "rexray"
+  ]
+}
+
