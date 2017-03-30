@@ -1,0 +1,61 @@
+{
+  "id": "/jira",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+    "*"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "docker.io/cptactionhank/atlassian-jira",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 0,
+          "servicePort": 10001,
+          "protocol": "tcp",
+          "labels": {}
+        }
+      ],
+      "privileged": false,
+      "parameters": [
+        {
+          "key": "volume-driver",
+          "value": "rexray"
+        },
+        {
+          "key": "volume",
+          "value": "var/atlassian/jira:/var/atlassian/jira"
+        },
+        {
+          "key": "volume",
+          "value": "opt/atlassian/jira/logs:/opt/atlassian/jira/logs"
+        }
+      ],
+      "forcePullImage": false
+    }
+  },
+  "labels": {
+    "HAPROXY_0_MODE": "http",
+    "HAPROXY_GROUP": "external",
+    "SERVICE_NAME": "jira",
+    "MARATHON_HOSTNAME": "jira",
+    "HAPROXY_0_PORT": "9000",
+    "SERVICE_TAGS": "jira",
+    "HAPROXY_0_VHOST": "jira"
+  },
+  "portDefinitions": [
+    {
+      "port": 10001,
+      "protocol": "tcp",
+      "name": "default",
+      "labels": {}
+    }
+  ]
+}
