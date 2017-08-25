@@ -39,7 +39,7 @@ Update the marathon app definitiosn `<app>.json` with your microservice domain.
 
 `deploy.sh app owncloud/owncloud.json`
 
-`deploy.sh app owncloud/postgres.json`
+`deploy.sh app owncloud/postgresql.json`
 
 ## Deploy app-flask
 
